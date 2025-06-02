@@ -1,7 +1,7 @@
 <template>
     <div class="flex bg-zinc-900 h-screen">
         <!-- sidebar start -->
-        <div class="bg-black w-[338px] p-8 flex flex-col overflow-scroll">
+        <div class="bg-black w-[338px] p-8 flex flex-col overflow-scroll sidebar-scroll">
             <div><Logo /></div>
             <!-- today main container start -->
              <div class="flex-grow">

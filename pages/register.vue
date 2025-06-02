@@ -4,7 +4,12 @@
         <div class="bg-zinc-900 w-[516px] p-12 flex-col justify-center">
             <Logo />
             <h1 class="text-white font-bold text-lg mt-8">Sign up for a free acount</h1>
-            <p class="text-zinc-300 text-sm mt-0.5">Alreadsy registered? <span class="font-bold text-[#FFAC00] underline">log in</span> to your account</p>
+            <p class="text-zinc-300 text-sm mt-0.5">
+                Alreadsy registered?
+                <nuxt-link to="/login" class="font-bold text-[#FFAC00] underline"
+                >log in</nuxt-link
+                > 
+                to your account</p>
             
             <form @submit.prevent="submit">
             <div class="mt-8">

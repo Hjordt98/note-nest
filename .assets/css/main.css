@@ -1,1 +1,35 @@
 @import "tailwindcss";
+
+/* Hide horizontal scrollbar and style vertical scrollbar for the sidebar */
+.sidebar-scroll {
+  overflow-y: auto;
+  overflow-x: hidden; /* Prevent horizontal scrollbar */
+  scrollbar-width: thin; /* For Firefox */
+  scrollbar-color: #a1842c #000; /* For Firefox: thumb and track */
+}
+
+/* Chrome, Edge, Safari */
+.sidebar-scroll::-webkit-scrollbar {
+  width: 8px;
+  background: transparent; /* Hide by default */
+  transition: background 0.3s;
+}
+
+.sidebar-scroll:hover::-webkit-scrollbar {
+  background: #222; /* Show track on hover */
+}
+
+.sidebar-scroll::-webkit-scrollbar-thumb {
+  background: #a1842c; /* Gold thumb */
+  border-radius: 4px;
+  transition: background 0.3s;
+}
+
+.sidebar-scroll::-webkit-scrollbar-thumb:hover {
+  background: #c2a84c; /* Lighter gold on hover */
+}
+
+.sidebar-scroll::-webkit-scrollbar-corner {
+  background: transparent;
+}
+
