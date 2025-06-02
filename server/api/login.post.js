@@ -45,8 +45,6 @@ export default defineEventHandler(async (event) => {
 
     const isValid = await bcrypt.compare(body.password, user.password)
 
-    console.log('IS VALID')
-    console.log(isValid)
     if (!isValid){
         throw createError({
             statusCode: 400,

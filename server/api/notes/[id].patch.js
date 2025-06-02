@@ -45,8 +45,6 @@ try {
         })
     }
 
-    console.log(id)
-
     await prisma.note.update({
       where: {
         id: Number(id),
@@ -55,7 +53,6 @@ try {
         text: body.updatedNote,
       },
     })
-    console.log(body)
 } catch (err) {
     console.log(err)
     }

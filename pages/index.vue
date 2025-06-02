@@ -158,8 +158,13 @@
         }
         
         textarea.value.focus()
-    } catch(err) {
-        console.log(err)
+    } catch(error) {
+        Swal.fire({
+        icon: 'error',
+        title: 'Opps',
+        text: error.response?._data?.message,
+        confirmButtonText: 'Close',
+    })
     }
 }
 
@@ -186,9 +191,13 @@
         selectedNote.value = notes.value [0]
         updatedNote.value = ''
         textarea.value.focus()
-        console.log(response)
-    } catch(err) {
-        console.log(err)
+    } catch(error) {
+        Swal.fire({
+        icon: 'error',
+        title: 'Opps',
+        text: error.response?._data?.message,
+        confirmButtonText: 'Close',
+    })
     }
 }
 
@@ -208,8 +217,13 @@
                 },
             }
         )
-    } catch(err) {
-        console.log(err)
+    } catch(error) {
+        Swal.fire({
+        icon: 'error',
+        title: 'Opps',
+        text: error.response?._data?.message,
+        confirmButtonText: 'Close',
+    })
     }
    }
 

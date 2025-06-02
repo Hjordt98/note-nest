@@ -25,7 +25,12 @@ export default defineEventHandler(async(event) => {
         })
         
         return notes
-    } catch(err) {
-        console.log(err)
+    } catch(error) {
+        Swal.fire({
+            icon: 'error',
+            title: 'Opps',
+            text: error.response?._data?.message,
+            confirmButtonText: 'Close',
+        })
     }
 })

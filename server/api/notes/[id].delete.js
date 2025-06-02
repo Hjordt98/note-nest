@@ -45,15 +45,18 @@ try {
         })
     }
 
-    console.log(id)
 
     await prisma.note.delete({
       where: {
         id: Number(id),
       },
     })
-    console.log(body)
-} catch (err) {
-    console.log(err)
+} catch (error) {
+    Swal.fire({
+        icon: 'error',
+        title: 'Opps',
+        text: error.response?._data?.message,
+        confirmButtonText: 'Close',
+    })
     }
 })

@@ -75,8 +75,6 @@ const password = ref('')
 
 
   } catch (error)  {
-    console.log('ERROR:')
-    console.log(error.response?._data?.message)  
     Swal.fire({
         title: 'Error!',
         text: error.response?._data?.message,
